@@ -1,7 +1,48 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Coming soon." : {
 
+    },
+    "General" : {
+
+    },
+    "Get Started" : {
+
+    },
+    "It never blocks anything, and everything stays on your Mac." : {
+
+    },
+    "Kyosaku gently nudges you when what's on your screen drifts away from your task." : {
+
+    },
+    "Permissions" : {
+
+    },
+    "Privacy" : {
+
+    },
+    "Quit Kyosaku" : {
+
+    },
+    "Settings" : {
+
+    },
+    "Settings…" : {
+
+    },
+    "Stats" : {
+
+    },
+    "Tasks will appear here." : {
+
+    },
+    "Templates" : {
+
+    },
+    "Welcome to Kyosaku" : {
+
+    }
   },
   "version" : "1.0"
 }
