@@ -5,4 +5,9 @@ import Observation
 @Observable
 final class AppRoot {
     private(set) var status: MonitoringStatus = .idle
+
+    let activationPolicy = ActivationPolicy()
+    @ObservationIgnored private(set) lazy var settingsCoordinator = SettingsCoordinator(
+        activationPolicy: activationPolicy
+    )
 }

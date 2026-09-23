@@ -2,6 +2,8 @@ import SwiftUI
 
 /// The menu bar popover. The task list replaces the placeholder once it is built.
 struct MenuContentView: View {
+    @Environment(AppRoot.self) private var root
+
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Tasks will appear here.")
@@ -10,6 +12,10 @@ struct MenuContentView: View {
                 .accessibilityIdentifier("menu.placeholder")
             Divider()
             HStack {
+                Button("Settings…") {
+                    root.settingsCoordinator.showSettings()
+                }
+                .accessibilityIdentifier("menu.settingsButton")
                 Spacer()
                 Button("Quit Kyosaku") {
                     NSApp.terminate(nil)
