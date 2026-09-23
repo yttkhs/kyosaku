@@ -18,6 +18,16 @@ final class SettingsWindowUITests: XCTestCase {
     }
 
     @MainActor
+    func testCommandCommaOpensSettings() {
+        let app = XCUIApplication.launchKyosakuForTesting()
+        XCTAssertTrue(app.staticTexts["menu.placeholder"].waitForExistence(timeout: 5))
+
+        app.typeKey(",", modifierFlags: .command)
+
+        XCTAssertTrue(app.toolbars.firstMatch.waitForExistence(timeout: 5))
+    }
+
+    @MainActor
     func testReopeningSettingsKeepsOneWindow() {
         let app = XCUIApplication.launchKyosakuForTesting()
         XCTAssertTrue(app.buttons["menu.settingsButton"].waitForExistence(timeout: 5))
