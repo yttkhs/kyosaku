@@ -78,6 +78,19 @@ targets:
         # XcodeGen derives TEST_HOST from the target name, which misses the Debug app's name.
         TEST_HOST: $(BUILT_PRODUCTS_DIR)/$(KYOSAKU_APP_NAME).app/Contents/MacOS/$(KYOSAKU_APP_NAME)
 
+  KyosakuUITests:
+    type: bundle.ui-testing
+    platform: macOS
+    sources:
+      - path: KyosakuUITests
+        type: syncedFolder
+    dependencies:
+      - target: Kyosaku
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: io.github.yttkhs.kyosaku.uitests
+        GENERATE_INFOPLIST_FILE: YES
+
 schemes:
   Kyosaku:
     build:
@@ -89,6 +102,7 @@ schemes:
       config: Debug
       targets:
         - KyosakuTests
+        - KyosakuUITests
         - package: KyosakuCore/KyosakuCoreTests
       environmentVariables:
         KYOSAKU_HOSTING_UNIT_TESTS: "1"

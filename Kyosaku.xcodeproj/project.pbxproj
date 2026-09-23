@@ -11,6 +11,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0019263B24623FD48AF109CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7ABA690A26E6F353D0F4051 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91C21A793A6C2FF69B65A8D3;
+			remoteInfo = Kyosaku;
+		};
 		25250E9A0F6DC33DC681DA9C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C7ABA690A26E6F353D0F4051 /* Project object */;
@@ -22,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		01F042904EC63A1DB0AAD431 /* KyosakuCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = KyosakuCore; path = KyosakuCore; sourceTree = SOURCE_ROOT; };
+		0333F29A51F2147F8833EC27 /* KyosakuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KyosakuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28536C0C04CF9D646ACD9A8E /* Kyosaku.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Kyosaku.xcconfig; sourceTree = "<group>"; };
 		3EE3BE55C09F1A2B3C750147 /* KyosakuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KyosakuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		570F238885960412C0C2D819 /* Kyosaku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kyosaku.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +54,15 @@
 			path = KyosakuTests;
 			sourceTree = "<group>";
 		};
+		887DB1D1AFE0685133D6A33F /* KyosakuUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = KyosakuUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +83,7 @@
 				F6D97DFA0A44BB47854524DC /* Configs */,
 				446210C05A5862AA1C2B3268 /* Kyosaku */,
 				69C4A016D7E338023F45AB90 /* KyosakuTests */,
+				887DB1D1AFE0685133D6A33F /* KyosakuUITests */,
 				9F79D05AD890505864FE4E23 /* Packages */,
 				C7942CB282D764BBF3A2FDD1 /* Products */,
 			);
@@ -84,6 +102,7 @@
 			children = (
 				570F238885960412C0C2D819 /* Kyosaku.app */,
 				3EE3BE55C09F1A2B3C750147 /* KyosakuTests.xctest */,
+				0333F29A51F2147F8833EC27 /* KyosakuUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +140,28 @@
 			productReference = 3EE3BE55C09F1A2B3C750147 /* KyosakuTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		46B0169078F174763D3CAA10 /* KyosakuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93D685EB7613E5A2AFB31BD0 /* Build configuration list for PBXNativeTarget "KyosakuUITests" */;
+			buildPhases = (
+				538E935295209140555E044C /* Sources */,
+				2008F5BA6007FA698853DE22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE1991C3B33C11D0DD0BD8F9 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				887DB1D1AFE0685133D6A33F /* KyosakuUITests */,
+			);
+			name = KyosakuUITests;
+			packageProductDependencies = (
+			);
+			productName = KyosakuUITests;
+			productReference = 0333F29A51F2147F8833EC27 /* KyosakuUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		91C21A793A6C2FF69B65A8D3 /* Kyosaku */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 241CE051917AE39DDBA4F816 /* Build configuration list for PBXNativeTarget "Kyosaku" */;
@@ -157,6 +198,11 @@
 						DevelopmentTeam = "";
 						ProvisioningStyle = Manual;
 					};
+					46B0169078F174763D3CAA10 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+						TestTargetID = 91C21A793A6C2FF69B65A8D3;
+					};
 					91C21A793A6C2FF69B65A8D3 = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Manual;
@@ -182,11 +228,19 @@
 			targets = (
 				91C21A793A6C2FF69B65A8D3 /* Kyosaku */,
 				336E4F2DE57F8103D69537B7 /* KyosakuTests */,
+				46B0169078F174763D3CAA10 /* KyosakuUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2008F5BA6007FA698853DE22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AF02DFEDBA404C7CFF65D85 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,6 +258,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		538E935295209140555E044C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2330EE29E79506EFABF6CC9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,9 +287,31 @@
 			target = 91C21A793A6C2FF69B65A8D3 /* Kyosaku */;
 			targetProxy = 25250E9A0F6DC33DC681DA9C /* PBXContainerItemProxy */;
 		};
+		DE1991C3B33C11D0DD0BD8F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91C21A793A6C2FF69B65A8D3 /* Kyosaku */;
+			targetProxy = 0019263B24623FD48AF109CB /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0D7260213B1D2F91BDF4EE52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.yttkhs.kyosaku.uitests;
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = Kyosaku;
+			};
+			name = Debug;
+		};
 		992646A689649242979D84EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -384,6 +467,23 @@
 			};
 			name = Release;
 		};
+		D7C6D10F32A40B17D38B0D5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.yttkhs.kyosaku.uitests;
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = Kyosaku;
+			};
+			name = Release;
+		};
 		F4A067D029D504A49AE0259A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 28536C0C04CF9D646ACD9A8E /* Kyosaku.xcconfig */;
@@ -476,6 +576,15 @@
 			buildConfigurations = (
 				F4A067D029D504A49AE0259A /* Debug */,
 				A31E6F936533A6A9300DDA40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		93D685EB7613E5A2AFB31BD0 /* Build configuration list for PBXNativeTarget "KyosakuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D7260213B1D2F91BDF4EE52 /* Debug */,
+				D7C6D10F32A40B17D38B0D5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

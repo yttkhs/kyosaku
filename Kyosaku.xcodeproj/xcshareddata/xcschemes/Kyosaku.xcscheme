@@ -55,6 +55,17 @@
             parallelizable = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "46B0169078F174763D3CAA10"
+               BuildableName = "KyosakuUITests.xctest"
+               BlueprintName = "KyosakuUITests"
+               ReferencedContainer = "container:Kyosaku.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "KyosakuCoreTests"
                BuildableName = "KyosakuCoreTests"
                BlueprintName = "KyosakuCoreTests"
