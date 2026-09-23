@@ -11,6 +11,8 @@ extension XCUIApplication {
         let app = XCUIApplication()
         app.launchArguments = ["-KyosakuUITesting", "-KyosakuMenuContentInWindow"]
         app.launch()
+        // While you use another app, macOS may not let Kyosaku come to the front by itself.
+        app.activate()
         return app
     }
 }

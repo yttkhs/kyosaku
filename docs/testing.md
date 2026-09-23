@@ -12,7 +12,8 @@ swift test --package-path KyosakuCore   # only the package, without building the
 `Scripts/test.sh` saves the results to `build/TestResults.xcresult`. In Xcode, ⌘U runs the same three
 targets.
 
-The first UI test run on a Mac may ask for an administrator password to allow UI automation.
+The first UI test run on a Mac may ask for an administrator password to allow UI automation. The UI tests
+move the pointer and type, so leave the Mac alone while they run.
 
 ## Test layers
 
