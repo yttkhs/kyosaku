@@ -1,0 +1,71 @@
+name: Bug report
+description: Report something that does not work as expected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug.
+
+        **Please do not paste the addresses, page titles or window titles of what you were viewing.** Describe them in general terms instead, such as "a video site" or "a spreadsheet".
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: input
+    id: kyosaku-version
+    attributes:
+      label: Kyosaku version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      placeholder: "26.0"
+    validations:
+      required: true
+  - type: input
+    id: chip
+    attributes:
+      label: Chip
+      placeholder: "Apple M1"
+    validations:
+      required: true
+  - type: dropdown
+    id: apple-intelligence
+    attributes:
+      label: Is Apple Intelligence turned on?
+      options:
+        - "Yes"
+        - "No"
+        - "I don't know"
+    validations:
+      required: true
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      description: The browser you were using when the problem happened.
+      options:
+        - Safari
+        - Google Chrome
+        - Firefox
+        - Another browser
+        - Not related to a browser
+    validations:
+      required: true

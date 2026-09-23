@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Select the newest Xcode 26
+        run: |
+          xcode=$(ls -d /Applications/Xcode_26.*.app | grep -v -i beta | sort -V | tail -n 1)
+          sudo xcode-select --switch "$xcode"
+          xcodebuild -version
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Check that the Xcode project matches project.yml
+        run: |
+          xcodegen generate
+          if [ -n "$(git status --porcelain -- Kyosaku.xcodeproj)" ]; then
+            git status --short -- Kyosaku.xcodeproj
+            echo "::error::Kyosaku.xcodeproj is out of date. Run 'xcodegen generate' and commit the result."
+            exit 1
+          fi
+
+      - name: Lint
+        run: Scripts/lint.sh
+
+      - name: Test
+        run: Scripts/test.sh SWIFT_TREAT_WARNINGS_AS_ERRORS=YES
+
+      - name: Keep the test results
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: TestResults
+          path: build/TestResults.xcresult
+          retention-days: 7
