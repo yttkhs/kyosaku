@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9919F6234D60CCA5A6B120E /* KyosakuCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3BE20D3272445BE55047DBD6 /* KyosakuCore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		25250E9A0F6DC33DC681DA9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7ABA690A26E6F353D0F4051 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91C21A793A6C2FF69B65A8D3;
+			remoteInfo = Kyosaku;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01F042904EC63A1DB0AAD431 /* KyosakuCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = KyosakuCore; path = KyosakuCore; sourceTree = SOURCE_ROOT; };
+		28536C0C04CF9D646ACD9A8E /* Kyosaku.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Kyosaku.xcconfig; sourceTree = "<group>"; };
+		3EE3BE55C09F1A2B3C750147 /* KyosakuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KyosakuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		570F238885960412C0C2D819 /* Kyosaku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kyosaku.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		446210C05A5862AA1C2B3268 /* Kyosaku */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = Kyosaku;
+			sourceTree = "<group>";
+		};
+		69C4A016D7E338023F45AB90 /* KyosakuTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = KyosakuTests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4449C7E7A81A252FC81348F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9919F6234D60CCA5A6B120E /* KyosakuCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78576CADEE2A1386B54AE8AC = {
+			isa = PBXGroup;
+			children = (
+				F6D97DFA0A44BB47854524DC /* Configs */,
+				446210C05A5862AA1C2B3268 /* Kyosaku */,
+				69C4A016D7E338023F45AB90 /* KyosakuTests */,
+				9F79D05AD890505864FE4E23 /* Packages */,
+				C7942CB282D764BBF3A2FDD1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F79D05AD890505864FE4E23 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				01F042904EC63A1DB0AAD431 /* KyosakuCore */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		C7942CB282D764BBF3A2FDD1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				570F238885960412C0C2D819 /* Kyosaku.app */,
+				3EE3BE55C09F1A2B3C750147 /* KyosakuTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6D97DFA0A44BB47854524DC /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				28536C0C04CF9D646ACD9A8E /* Kyosaku.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		336E4F2DE57F8103D69537B7 /* KyosakuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9C38BA1042226DA4D3575AD /* Build configuration list for PBXNativeTarget "KyosakuTests" */;
+			buildPhases = (
+				E60F4AD6E1B6B62C0C8341AA /* Sources */,
+				E9DF2C7F4E99D13A53B77380 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				427E6FE2A4822E4483966E38 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				69C4A016D7E338023F45AB90 /* KyosakuTests */,
+			);
+			name = KyosakuTests;
+			packageProductDependencies = (
+			);
+			productName = KyosakuTests;
+			productReference = 3EE3BE55C09F1A2B3C750147 /* KyosakuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		91C21A793A6C2FF69B65A8D3 /* Kyosaku */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 241CE051917AE39DDBA4F816 /* Build configuration list for PBXNativeTarget "Kyosaku" */;
+			buildPhases = (
+				A2330EE29E79506EFABF6CC9 /* Sources */,
+				2AF02DFEDBA404C7CFF65D85 /* Resources */,
+				4449C7E7A81A252FC81348F4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				446210C05A5862AA1C2B3268 /* Kyosaku */,
+			);
+			name = Kyosaku;
+			packageProductDependencies = (
+				3BE20D3272445BE55047DBD6 /* KyosakuCore */,
+			);
+			productName = Kyosaku;
+			productReference = 570F238885960412C0C2D819 /* Kyosaku.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7ABA690A26E6F353D0F4051 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					336E4F2DE57F8103D69537B7 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					91C21A793A6C2FF69B65A8D3 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 775B566B629EE2545B6A9653 /* Build configuration list for PBXProject "Kyosaku" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 78576CADEE2A1386B54AE8AC;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3EA3D976E80F5666840D99DA /* XCLocalSwiftPackageReference "KyosakuCore" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C7942CB282D764BBF3A2FDD1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91C21A793A6C2FF69B65A8D3 /* Kyosaku */,
+				336E4F2DE57F8103D69537B7 /* KyosakuTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2AF02DFEDBA404C7CFF65D85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9DF2C7F4E99D13A53B77380 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2330EE29E79506EFABF6CC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E60F4AD6E1B6B62C0C8341AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		427E6FE2A4822E4483966E38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91C21A793A6C2FF69B65A8D3 /* Kyosaku */;
+			targetProxy = 25250E9A0F6DC33DC681DA9C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		992646A689649242979D84EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.yttkhs.kyosaku.tests;
+				SDKROOT = macosx;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/$(KYOSAKU_APP_NAME).app/Contents/MacOS/$(KYOSAKU_APP_NAME)";
+			};
+			name = Debug;
+		};
+		9BAC16DE171BE5A7CE49FEA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Configs/Kyosaku.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(KYOSAKU_APP_NAME)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Kyosaku reads the address of the page open in Safari to check whether it relates to your current task. It never leaves your Mac.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Yuta Takahashi";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(KYOSAKU_BUNDLE_IDENTIFIER)";
+				PRODUCT_MODULE_NAME = Kyosaku;
+				PRODUCT_NAME = "$(KYOSAKU_APP_NAME)";
+				SDKROOT = macosx;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+			};
+			name = Debug;
+		};
+		A2FF4244302297C20EC4D24B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.yttkhs.kyosaku.tests;
+				SDKROOT = macosx;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/$(KYOSAKU_APP_NAME).app/Contents/MacOS/$(KYOSAKU_APP_NAME)";
+			};
+			name = Release;
+		};
+		A31E6F936533A6A9300DDA40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28536C0C04CF9D646ACD9A8E /* Kyosaku.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				KYOSAKU_APP_NAME = Kyosaku;
+				KYOSAKU_BUNDLE_IDENTIFIER = io.github.yttkhs.kyosaku;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		A5838A3BF10A3C44A76EAE1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Configs/Kyosaku.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(KYOSAKU_APP_NAME)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Kyosaku reads the address of the page open in Safari to check whether it relates to your current task. It never leaves your Mac.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Yuta Takahashi";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(KYOSAKU_BUNDLE_IDENTIFIER)";
+				PRODUCT_MODULE_NAME = Kyosaku;
+				PRODUCT_NAME = "$(KYOSAKU_APP_NAME)";
+				SDKROOT = macosx;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+			};
+			name = Release;
+		};
+		F4A067D029D504A49AE0259A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28536C0C04CF9D646ACD9A8E /* Kyosaku.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				KYOSAKU_APP_NAME = "Kyosaku Dev";
+				KYOSAKU_BUNDLE_IDENTIFIER = io.github.yttkhs.kyosaku.dev;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		241CE051917AE39DDBA4F816 /* Build configuration list for PBXNativeTarget "Kyosaku" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BAC16DE171BE5A7CE49FEA4 /* Debug */,
+				A5838A3BF10A3C44A76EAE1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		775B566B629EE2545B6A9653 /* Build configuration list for PBXProject "Kyosaku" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4A067D029D504A49AE0259A /* Debug */,
+				A31E6F936533A6A9300DDA40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D9C38BA1042226DA4D3575AD /* Build configuration list for PBXNativeTarget "KyosakuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				992646A689649242979D84EC /* Debug */,
+				A2FF4244302297C20EC4D24B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		3EA3D976E80F5666840D99DA /* XCLocalSwiftPackageReference "KyosakuCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = KyosakuCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3BE20D3272445BE55047DBD6 /* KyosakuCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = KyosakuCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C7ABA690A26E6F353D0F4051 /* Project object */;
+}

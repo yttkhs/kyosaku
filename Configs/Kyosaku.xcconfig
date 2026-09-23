@@ -1,0 +1,7 @@
+// Signing defaults for every target: signed ad hoc unless Signing.local.xcconfig says otherwise.
+CODE_SIGN_STYLE = Manual
+CODE_SIGN_IDENTITY = -
+DEVELOPMENT_TEAM =
+
+// Your own signing identity and team, never committed. See docs/development.md.
+#include? "Signing.local.xcconfig"

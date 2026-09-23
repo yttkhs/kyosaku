@@ -1,0 +1,96 @@
+name: Kyosaku
+
+options:
+  projectFormat: xcode16_0
+  minimumXcodeGenVersion: 2.46.0
+  xcodeVersion: "26.0"
+  deploymentTarget:
+    macOS: "26.0"
+
+configFiles:
+  Debug: Configs/Kyosaku.xcconfig
+  Release: Configs/Kyosaku.xcconfig
+
+settings:
+  base:
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "6.0"
+    SWIFT_APPROACHABLE_CONCURRENCY: YES
+    ARCHS: arm64
+    DEAD_CODE_STRIPPING: YES
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+    STRING_CATALOG_GENERATE_SYMBOLS: YES
+    SWIFT_EMIT_LOC_STRINGS: YES
+  configs:
+    Debug:
+      KYOSAKU_APP_NAME: Kyosaku Dev
+      KYOSAKU_BUNDLE_IDENTIFIER: io.github.yttkhs.kyosaku.dev
+    Release:
+      KYOSAKU_APP_NAME: Kyosaku
+      KYOSAKU_BUNDLE_IDENTIFIER: io.github.yttkhs.kyosaku
+      ENABLE_HARDENED_RUNTIME: YES
+
+packages:
+  KyosakuCore:
+    path: KyosakuCore
+
+targets:
+  Kyosaku:
+    type: application
+    platform: macOS
+    sources:
+      - path: Kyosaku
+        type: syncedFolder
+    dependencies:
+      - package: KyosakuCore
+    settings:
+      base:
+        PRODUCT_NAME: $(KYOSAKU_APP_NAME)
+        PRODUCT_MODULE_NAME: Kyosaku
+        PRODUCT_BUNDLE_IDENTIFIER: $(KYOSAKU_BUNDLE_IDENTIFIER)
+        SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+        CODE_SIGN_ENTITLEMENTS: Configs/Kyosaku.entitlements
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: $(KYOSAKU_APP_NAME)
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.productivity
+        INFOPLIST_KEY_LSUIElement: YES
+        INFOPLIST_KEY_NSAppleEventsUsageDescription: >-
+          Kyosaku reads the address of the page open in Safari to check whether it relates to your
+          current task. It never leaves your Mac.
+        INFOPLIST_KEY_NSHumanReadableCopyright: © 2026 Yuta Takahashi
+        ENABLE_PREVIEWS: YES
+
+  KyosakuTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: KyosakuTests
+        type: syncedFolder
+    dependencies:
+      - target: Kyosaku
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: io.github.yttkhs.kyosaku.tests
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+        # XcodeGen derives TEST_HOST from the target name, which misses the Debug app's name.
+        TEST_HOST: $(BUILT_PRODUCTS_DIR)/$(KYOSAKU_APP_NAME).app/Contents/MacOS/$(KYOSAKU_APP_NAME)
+
+schemes:
+  Kyosaku:
+    build:
+      targets:
+        Kyosaku: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - KyosakuTests
+        - package: KyosakuCore/KyosakuCoreTests
+      environmentVariables:
+        KYOSAKU_HOSTING_UNIT_TESTS: "1"
+    archive:
+      config: Release
