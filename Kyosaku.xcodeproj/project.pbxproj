@@ -32,7 +32,7 @@
 		0333F29A51F2147F8833EC27 /* KyosakuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KyosakuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28536C0C04CF9D646ACD9A8E /* Kyosaku.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Kyosaku.xcconfig; sourceTree = "<group>"; };
 		3EE3BE55C09F1A2B3C750147 /* KyosakuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KyosakuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		570F238885960412C0C2D819 /* Kyosaku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kyosaku.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB94193450B6E18BA30A910A /* Kyosaku Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kyosaku Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -100,7 +100,7 @@
 		C7942CB282D764BBF3A2FDD1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				570F238885960412C0C2D819 /* Kyosaku.app */,
+				DB94193450B6E18BA30A910A /* Kyosaku Dev.app */,
 				3EE3BE55C09F1A2B3C750147 /* KyosakuTests.xctest */,
 				0333F29A51F2147F8833EC27 /* KyosakuUITests.xctest */,
 			);
@@ -182,7 +182,7 @@
 				3BE20D3272445BE55047DBD6 /* KyosakuCore */,
 			);
 			productName = Kyosaku;
-			productReference = 570F238885960412C0C2D819 /* Kyosaku.app */;
+			productReference = DB94193450B6E18BA30A910A /* Kyosaku Dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "91C21A793A6C2FF69B65A8D3"
-               BuildableName = "Kyosaku.app"
+               BuildableName = "Kyosaku Dev.app"
                BlueprintName = "Kyosaku"
                ReferencedContainer = "container:Kyosaku.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "91C21A793A6C2FF69B65A8D3"
-            BuildableName = "Kyosaku.app"
+            BuildableName = "Kyosaku Dev.app"
             BlueprintName = "Kyosaku"
             ReferencedContainer = "container:Kyosaku.xcodeproj">
          </BuildableReference>
@@ -98,7 +98,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "91C21A793A6C2FF69B65A8D3"
-            BuildableName = "Kyosaku.app"
+            BuildableName = "Kyosaku Dev.app"
             BlueprintName = "Kyosaku"
             ReferencedContainer = "container:Kyosaku.xcodeproj">
          </BuildableReference>
@@ -117,7 +117,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "91C21A793A6C2FF69B65A8D3"
-            BuildableName = "Kyosaku.app"
+            BuildableName = "Kyosaku Dev.app"
             BlueprintName = "Kyosaku"
             ReferencedContainer = "container:Kyosaku.xcodeproj">
          </BuildableReference>

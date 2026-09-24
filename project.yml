@@ -25,7 +25,7 @@ settings:
     SWIFT_EMIT_LOC_STRINGS: YES
   configs:
     Debug:
-      KYOSAKU_APP_NAME: Kyosaku Dev
+      KYOSAKU_APP_NAME: &debugAppName Kyosaku Dev
       KYOSAKU_BUNDLE_IDENTIFIER: io.github.yttkhs.kyosaku.dev
     Release:
       KYOSAKU_APP_NAME: Kyosaku
@@ -42,6 +42,8 @@ targets:
   Kyosaku:
     type: application
     platform: macOS
+    # Xcode names the product after the default configuration, Debug, and rewrites a scheme that disagrees.
+    productName: *debugAppName
     sources:
       - path: Kyosaku
         type: syncedFolder
@@ -77,7 +79,7 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: io.github.yttkhs.kyosaku.tests
         GENERATE_INFOPLIST_FILE: YES
         SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
-        # XcodeGen derives TEST_HOST from the target name, which misses the Debug app's name.
+        # XcodeGen derives TEST_HOST from productName, which names only the Debug app.
         TEST_HOST: $(BUILT_PRODUCTS_DIR)/$(KYOSAKU_APP_NAME).app/Contents/MacOS/$(KYOSAKU_APP_NAME)
 
   KyosakuUITests:
