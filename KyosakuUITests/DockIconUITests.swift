@@ -5,7 +5,7 @@ final class DockIconUITests: XCTestCase {
     @MainActor
     func testShowsTheDockIconOnlyWhileAWindowIsOpen() {
         let app = XCUIApplication.launchKyosakuForTesting()
-        XCTAssertTrue(app.staticTexts["menu.placeholder"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["tasks.newButton"].waitForExistence(timeout: 5))
         XCTAssertTrue(waitForActivationPolicy(.regular))
 
         app.windows.firstMatch.buttons[XCUIIdentifierCloseWindow].click()

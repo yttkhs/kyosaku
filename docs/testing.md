@@ -20,7 +20,7 @@ move the pointer and type, so leave the Mac alone while they run.
 | Layer | Covers | How | Where |
 | --- | --- | --- | --- |
 | 1. Unit | Logic in `KyosakuCore` and in the app | Swift Testing, with fake clocks and fake system services | Every build and CI |
-| 2. Storage | Schema migration, retention limits and deleting all data | Temporary SwiftData stores | Every build and CI (once storage exists) |
+| 2. Storage | Saving and reopening, schema migration, retention limits and deleting all data | SwiftData stores in scratch folders | Every build and CI |
 | 3. UI | The main flows through the popover, Settings and the welcome | XCUITest, with launch options that replace system services | CI, and locally |
 | 4. On-device | Apple Intelligence, the accessibility API, Apple events, notifications, sleep and login items | Signed builds on Macs running macOS 26 and 27, following a checklist | Locally, by hand |
 | 5. Pre-release | Privacy, signing and relevance accuracy | The checks in "Release criteria" below | Locally, by hand |
@@ -31,6 +31,7 @@ Apple Intelligence does not run in virtual machines, so layers 4 and 5 always ru
 
 - Never touch state that the Mac shares with the apps you use. Create scratch user defaults with
   `UserDefaults(suiteName:)` and a unique name, and remove them afterwards.
+- Open stores in a scratch folder, with `withScratchFolder` or `ScratchStore`, never the app's own store.
 - Give every element a UI test touches an accessibility identifier named `<area>.<element>`, such as
   `menu.settingsButton` or `settings.pane.templates`. Only what AppKit draws itself, such as toolbar tabs
   and window titles, is found by its title.

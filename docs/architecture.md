@@ -24,9 +24,13 @@ events, notifications or storage.
 finished launching. `start()` is the whole launch sequence, so reading it tells you what Kyosaku does at
 startup. `AppRoot` is not a singleton, so tests can build their own.
 
+`start()` first opens the SwiftData store and builds `TasksCoordinator` on it. The unit test host skips
+`start()`, so the tests never open the Dev app's own store.
+
 Coordinators are `@ObservationIgnored` lazy properties of `AppRoot`, so reading one never makes a view
-redraw. Views get `AppRoot` from the environment (`@Environment(AppRoot.self)`) and call a coordinator; a
-view never mutates state or decides policy itself.
+redraw. `tasks` is the exception: `start()` creates it, and it is observed, so that the menu bar icon
+redraws once the tasks are open. Views get `AppRoot` from the environment (`@Environment(AppRoot.self)`)
+and call a coordinator; a view never mutates state or decides policy itself.
 
 ## Windows
 
@@ -49,8 +53,12 @@ view never mutates state or decides policy itself.
 
 ## Where data lives
 
-These are the rules for the features to come. So far, the only thing stored is whether the welcome was
-shown.
+These are the rules for every feature. So far, SwiftData holds the tasks, and UserDefaults holds the task
+in progress and whether the welcome was shown.
+
+The store is `Kyosaku.store` in `~/Library/Application Support/<bundle ID>/`, so the Dev app and an
+installed Kyosaku never share it. Until the first release, `KyosakuSchemaV1` may still change; after it,
+every change adds a schema version and a migration stage to `KyosakuMigrationPlan`.
 
 | Where | What |
 | --- | --- |
