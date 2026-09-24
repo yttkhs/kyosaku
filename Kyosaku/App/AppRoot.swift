@@ -18,7 +18,7 @@ final class AppRoot {
     )
     @ObservationIgnored private lazy var menuContentWindow = AppWindowController(
         title: "Kyosaku",
-        contentSize: CGSize(width: 300, height: 160),
+        contentSize: CGSize(width: 300, height: 520),
         activationPolicy: activationPolicy
     )
 
