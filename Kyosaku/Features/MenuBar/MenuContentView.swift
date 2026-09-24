@@ -11,6 +11,7 @@ struct MenuContentView: View {
 
     @Environment(AppRoot.self) private var root
     @State private var screen = Screen.list
+    @State private var showsCompleted = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -19,6 +20,7 @@ struct MenuContentView: View {
                 case .list:
                     TaskListView(
                         tasks: tasks,
+                        showsCompleted: $showsCompleted,
                         onNewTask: { screen = .newTask },
                         onEdit: { screen = .edit($0) }
                     )

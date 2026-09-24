@@ -1,9 +1,10 @@
 import KyosakuCore
 import SwiftUI
 
-/// The task in progress, then the tasks not started yet.
+/// The task in progress, then the tasks not started yet, then the completed ones.
 struct TaskListView: View {
     let tasks: TasksCoordinator
+    @Binding var showsCompleted: Bool
     let onNewTask: () -> Void
     let onEdit: (WorkTask) -> Void
 
@@ -21,17 +22,37 @@ struct TaskListView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 6) {
                     if let active = tasks.list.active {
-                        TaskRow(task: active, onEdit: onEdit)
+                        TaskRow(task: active, isActive: true, tasks: tasks, onEdit: onEdit)
                         Divider()
                     }
                     ForEach(tasks.list.notStarted) { task in
-                        TaskRow(task: task, onEdit: onEdit)
+                        TaskRow(task: task, isActive: false, tasks: tasks, onEdit: onEdit)
+                    }
+                    if !tasks.list.completed.isEmpty {
+                        completedSection
                     }
                 }
             }
             // Grows with the tasks up to this height, then scrolls.
             .frame(maxHeight: 360)
             .fixedSize(horizontal: false, vertical: true)
+        }
+    }
+
+    @ViewBuilder private var completedSection: some View {
+        Button {
+            showsCompleted.toggle()
+        } label: {
+            Label(
+                "Completed (\(tasks.list.completed.count))",
+                systemImage: showsCompleted ? "chevron.down" : "chevron.right")
+        }
+        .buttonStyle(.borderless)
+        .accessibilityIdentifier("tasks.completedToggle")
+        if showsCompleted {
+            ForEach(tasks.list.completed) { task in
+                CompletedTaskRow(task: task, tasks: tasks)
+            }
         }
     }
 }
