@@ -48,6 +48,19 @@ struct TaskDraftTests {
         #expect(TaskDraft.remainingCount(of: String(repeating: "a", count: 100), limit: 100) == 0)
     }
 
+    @Test func countsHowFarPastTheLimitTheTextIs() {
+        #expect(TaskDraft.remainingCount(of: String(repeating: "a", count: 105), limit: 100) == -5)
+    }
+
+    @Test func fitsOnlyWhileBothFieldsAreWithinTheirLimits() {
+        let name = String(repeating: "a", count: TaskDraft.nameLimit)
+        let details = String(repeating: "a", count: TaskDraft.detailsLimit)
+
+        #expect(TaskDraft(name: name, details: details).fitsLimits)
+        #expect(!TaskDraft(name: name + "a", details: details).fitsLimits)
+        #expect(!TaskDraft(name: name, details: details + "a").fitsLimits)
+    }
+
     @Test func normalizesToTheSameResultTwice() {
         let once = TaskDraft(name: String(repeating: "a", count: 99) + " b", details: " x ").normalized
 

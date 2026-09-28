@@ -29,14 +29,17 @@ public struct TaskDraft: Equatable, Sendable {
 
     public var canSave: Bool { !normalized.name.isEmpty }
 
+    // Text an input method commits can overshoot a limit, and must not be cut behind the user's back.
+    public var fitsLimits: Bool { name.count <= Self.nameLimit && details.count <= Self.detailsLimit }
+
     /// `text` cut at `limit`, counting each character a person sees as one.
     public static func clipped(_ text: String, limit: Int) -> String {
         text.count > limit ? String(text.prefix(limit)) : text
     }
 
-    /// How many more characters fit, once `text` is past 80% of `limit`.
+    /// How many more characters fit, once `text` is past 80% of `limit`; negative once it is over.
     public static func remainingCount(of text: String, limit: Int) -> Int? {
-        text.count * 5 > limit * 4 ? max(limit - text.count, 0) : nil
+        text.count * 5 > limit * 4 ? limit - text.count : nil
     }
 
     private static func fitted(_ text: String, limit: Int) -> String {

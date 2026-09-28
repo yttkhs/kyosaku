@@ -72,15 +72,17 @@ struct TaskForm: View {
                     .accessibilityIdentifier("taskForm.cancelButton")
                 Button(submitTitle, action: submit)
                     .keyboardShortcut(.return, modifiers: .command)
-                    .disabled(!draft.canSave)
+                    .disabled(!canSubmit)
                     .accessibilityIdentifier("taskForm.submitButton")
             }
         }
         .onAppear { focusedField = .name }
     }
 
+    private var canSubmit: Bool { draft.canSave && draft.fitsLimits }
+
     private func submit() {
-        guard draft.canSave else { return }
+        guard canSubmit else { return }
         onSubmit(draft)
     }
 
@@ -95,10 +97,17 @@ struct TaskForm: View {
 
         var body: some View {
             if let remaining = TaskDraft.remainingCount(of: text, limit: limit) {
-                Text("\(remaining) left")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                    .monospacedDigit()
+                Group {
+                    if remaining < 0 {
+                        Text("\(-remaining) over")
+                            .foregroundStyle(.red)
+                    } else {
+                        Text("\(remaining) left")
+                            .foregroundStyle(.secondary)
+                    }
+                }
+                .font(.caption)
+                .monospacedDigit()
             }
         }
     }
