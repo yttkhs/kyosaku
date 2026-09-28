@@ -16,6 +16,19 @@ extension XCUIApplication {
         return app
     }
 
+    /// Launches Kyosaku with the UI-testing option and opens its real menu bar popover.
+    @MainActor
+    static func openKyosakuPopoverForTesting() -> XCUIApplication {
+        let app = XCUIApplication()
+        app.launchArguments = ["-KyosakuUITesting"]
+        app.launch()
+        let statusItem = app.statusItems["Kyosaku"]
+        XCTAssertTrue(statusItem.waitForExistence(timeout: 5))
+        statusItem.click()
+        XCTAssertTrue(app.buttons["tasks.newButton"].waitForExistence(timeout: 5))
+        return app
+    }
+
     /// Adds a task through the form, the way a person would.
     @MainActor
     func addTask(named name: String) {

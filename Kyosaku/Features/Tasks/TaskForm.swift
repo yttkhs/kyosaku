@@ -76,7 +76,13 @@ struct TaskForm: View {
                     .accessibilityIdentifier("taskForm.submitButton")
             }
         }
-        .onAppear { focusedField = .name }
+        .task {
+            // The popover drops a focus request made while the form is appearing, so ask until it holds.
+            for _ in 0..<10 where focusedField == nil {
+                focusedField = .name
+                try? await Task.sleep(for: .milliseconds(50))
+            }
+        }
     }
 
     private var canSubmit: Bool { draft.canSave && draft.fitsLimits }
