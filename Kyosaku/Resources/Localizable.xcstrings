@@ -1,7 +1,34 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%lld left" : {
+
+    },
+    "%lld over" : {
+
+    },
+    "Add" : {
+
+    },
+    "Cancel" : {
+
+    },
     "Coming soon." : {
+
+    },
+    "Complete" : {
+
+    },
+    "Completed (%lld)" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Description" : {
+
+    },
+    "Edit Task" : {
 
     },
     "General" : {
@@ -10,10 +37,19 @@
     "Get Started" : {
 
     },
+    "In Progress" : {
+
+    },
     "It never blocks anything, and everything stays on your Mac." : {
 
     },
     "Kyosaku gently nudges you when what's on your screen drifts away from your task." : {
+
+    },
+    "Kyosaku uses this to tell what's related." : {
+
+    },
+    "New Task" : {
 
     },
     "Permissions" : {
@@ -25,6 +61,12 @@
     "Quit Kyosaku" : {
 
     },
+    "Restore" : {
+
+    },
+    "Save" : {
+
+    },
     "Settings" : {
 
     },
@@ -34,7 +76,10 @@
     "Stats" : {
 
     },
-    "Tasks will appear here." : {
+    "Task name" : {
+
+    },
+    "Tasks can't be saved right now." : {
 
     },
     "Templates" : {

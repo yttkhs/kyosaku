@@ -47,6 +47,14 @@ To see the first-launch welcome again:
 defaults delete io.github.yttkhs.kyosaku.dev hasSeenOnboarding
 ```
 
+To start the Dev app with no tasks, for example after an incompatible change to `KyosakuSchemaV1` before
+the first release, quit it and delete its store and the task in progress:
+
+```sh
+rm -r ~/"Library/Application Support/io.github.yttkhs.kyosaku.dev"
+defaults delete io.github.yttkhs.kyosaku.dev activeTaskID
+```
+
 ## Project settings
 
 `project.yml` is the only place for build settings, and `Configs/Kyosaku.xcconfig` holds the signing
@@ -86,7 +94,7 @@ Commit the catalog with the change that added the strings.
 
 | Option | Effect |
 | --- | --- |
-| `-KyosakuUITesting` | Skips everything that touches the system. For now: the welcome is not shown or recorded |
+| `-KyosakuUITesting` | Keeps UI tests off the Dev app's data: the welcome is neither shown nor recorded, and tasks live in memory, with scratch defaults cleared at every launch |
 | `-KyosakuMenuContentInWindow` | Shows the popover content in a normal window, so UI tests can reach it |
 | `KYOSAKU_HOSTING_UNIT_TESTS=1` | Set by the scheme while unit tests run inside the app; `start()` is skipped |
 

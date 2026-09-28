@@ -25,6 +25,7 @@ third-party dependencies.
 | `Kyosaku/Features/` | One folder per feature: its views, its coordinator and its app-side logic |
 | `Kyosaku/Platform/` | Small wrappers over system behavior, such as `ActivationPolicy` and `LaunchOptions` |
 | `Kyosaku/Windows/` | `AppWindowController`, the owner of each titled window |
+| `Kyosaku/Storage/` | The SwiftData schema, and the code that opens the one store every feature shares |
 | `Kyosaku/Resources/` | `Localizable.xcstrings` |
 | `KyosakuCore/` | The local Swift package with the logic that needs neither UI nor system APIs |
 | `KyosakuTests/`, `KyosakuUITests/` | App unit tests (Swift Testing) and UI tests (XCUITest) |

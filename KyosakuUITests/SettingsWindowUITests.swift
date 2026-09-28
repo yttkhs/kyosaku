@@ -4,7 +4,7 @@ final class SettingsWindowUITests: XCTestCase {
     @MainActor
     func testOpensSettingsWithItsFiveTabs() {
         let app = XCUIApplication.launchKyosakuForTesting()
-        XCTAssertTrue(app.staticTexts["menu.placeholder"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["tasks.newButton"].waitForExistence(timeout: 5))
 
         app.buttons["menu.settingsButton"].click()
 
@@ -20,7 +20,7 @@ final class SettingsWindowUITests: XCTestCase {
     @MainActor
     func testCommandCommaOpensSettings() {
         let app = XCUIApplication.launchKyosakuForTesting()
-        XCTAssertTrue(app.staticTexts["menu.placeholder"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["tasks.newButton"].waitForExistence(timeout: 5))
 
         app.typeKey(",", modifierFlags: .command)
 
