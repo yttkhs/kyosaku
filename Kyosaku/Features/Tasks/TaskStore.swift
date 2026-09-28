@@ -30,6 +30,7 @@ final class TaskStore {
         // A store that could not be read may still hold the task, so it stays in progress.
         if !self.isSavingUnavailable, list.active == nil, activeTaskID != nil {
             activeTaskID = nil
+            Self.logger.notice("Stopped work on a task that is gone or completed")
         }
     }
 
