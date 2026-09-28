@@ -1,3 +1,4 @@
+import Foundation
 import KyosakuCore
 import Testing
 
@@ -25,17 +26,21 @@ struct AppRootTests {
     }
 
     @Test func startsEveryUITestingLaunchWithNoTasks() throws {
+        let suiteName = "\(Bundle.main.bundleIdentifier ?? "Kyosaku").uitesting"
+        let scratch = try #require(UserDefaults(suiteName: suiteName))
         let first = AppRoot(launch: uiTestingLaunch)
         first.start()
         let tasks = try #require(first.tasks)
         tasks.addTask(TaskDraft(name: "Left over"))
         let task = try #require(tasks.list.notStarted.first)
         tasks.startWorking(on: task.id)
+        #expect(scratch.string(forKey: TaskStore.activeTaskIDKey) == task.id.uuidString)
 
         let second = AppRoot(launch: uiTestingLaunch)
         second.start()
 
         #expect(try #require(second.tasks).list == .empty)
+        #expect(scratch.string(forKey: TaskStore.activeTaskIDKey) == nil)
     }
 }
 
