@@ -111,6 +111,20 @@ final class TaskListUITests: XCTestCase {
     }
 
     @MainActor
+    func testKeepsADeleteConfirmationWithItsOwnTask() {
+        let app = XCUIApplication.launchKyosakuForTesting()
+        app.addTask(named: "Older")
+        app.addTask(named: "Newer")
+        app.control("task.activeToggle", ofTask: "Older").click()
+        app.control("task.deleteButton", ofTask: "Older").click()
+
+        app.control("task.activeToggle", ofTask: "Newer").click()
+
+        XCTAssertTrue(app.control("task.activeToggle", ofTask: "Newer").waitForExistence(timeout: 5))
+        XCTAssertFalse(app.control("task.confirmDeleteButton", ofTask: "Newer").exists)
+    }
+
+    @MainActor
     func testNamesTheControlsThatShowOnlyAnIcon() {
         let app = XCUIApplication.launchKyosakuForTesting()
         app.addTask(named: "Label check")

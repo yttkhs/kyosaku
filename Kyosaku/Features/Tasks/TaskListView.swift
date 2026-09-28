@@ -23,6 +23,8 @@ struct TaskListView: View {
                 VStack(alignment: .leading, spacing: 6) {
                     if let active = tasks.list.active {
                         TaskRow(task: active, isActive: true, tasks: tasks, onEdit: onEdit)
+                            // A new task in progress gets a fresh row, not the last one's delete confirmation.
+                            .id(active.id)
                         Divider()
                     }
                     ForEach(tasks.list.notStarted) { task in
